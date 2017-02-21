@@ -25,8 +25,9 @@ describe('CommentBox', () => {
     it('shows text that text in the testarea', () => {
       expect(component.find('textarea')).to.have.value('test comment')
     })
-    it('should clear input when submitted', ()=> {
-
+    it('should clear input onSubmit', ()=> {
+      component.simulate('submit')
+      expect(component.find('textarea')).to.have.value('')
     })
   })
 
